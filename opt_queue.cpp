@@ -30,12 +30,6 @@ public:
         return inUse == 0;
     }
 
-    void print() {
-        for (int i = nextFull, count = 0; count < inUse; i = (i + 1) % data.size(), count++) {
-            std::cout << data.at(i) << " ";
-        }
-    }
-
 private:
     const int BLOCK_SIZE = 10;
     std::vector<int> data;
