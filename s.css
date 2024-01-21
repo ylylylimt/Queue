@@ -1,0 +1,225 @@
+*{
+    margin:0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    color: white;
+    }
+    .title{
+        font-size: 2rem;
+        font-weight: 700;
+        margin-left: 11%;
+        padding: 1rem 0.5rem;
+    }
+    p{
+        padding: 1rem 0.5rem;
+        font-weight: 400;
+     }
+    #searchInput {
+        width: 80%;
+        padding: 10px;
+        margin-bottom: 10px;
+        margin-left: 10%;
+        box-sizing: border-box;
+        color: black;
+    }
+
+    /* FILTERABLE GALLERY https://www.bijanrai.com.np/2023/10/filterable-image-gallery.html */
+    .container-gallery{
+    max-width: 1170px;
+    margin:auto;
+    }
+    .row-h{
+    display: flex;
+    flex-wrap: wrap;
+    }
+
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    img{
+    
+    vertical-align: middle;
+    }
+    .gallery{
+    width: 100%;
+    display: block;
+    min-height: 100vh;
+    background-color: black;
+    padding: 100px 0;
+    }
+    .gallery .gallery-filter{
+    padding: 0 15px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+    }
+    .gallery .gallery-filter .filter-item{
+    color: #ffffff;
+    font-size: 18px;
+    text-transform: uppercase;
+    display: inline-block;
+    margin:0 10px;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    }
+    .gallery .gallery-filter .filter-item.active{
+    color: #5C5696;
+    border-color : #5C5696;
+    }
+    .gallery .gallery-item{
+    width: calc(100% / 3);
+    padding: 15px;
+    }
+    .gallery .gallery-item-inner img{
+    width: 100%;
+    }
+    .gallery .gallery-item.show{
+    animation: fadeIn 0.5s ease;
+    }
+    .gallery .search{
+        padding: 5px;
+    }
+    @keyframes fadeIn{
+    0%{
+    opacity: 0;
+    }
+    100%{
+    opacity: 1;
+    }
+    }
+    .gallery .gallery-item.hide{
+    display: none;
+    }
+
+    @media(max-width: 991px){
+    .gallery .gallery-item{
+    width: 50%;
+    }
+    }
+    @media(max-width: 767px){
+        .gallery .gallery-item{
+    width: 100%;
+    }
+    .gallery .gallery-filter .filter-item{
+    margin-bottom: 10px;
+    }
+    }
+
+    /* MODAL https://www.w3schools.com/howto/howto_css_modals.asp */
+    .modal {
+        display: none; 
+        position: fixed; 
+        z-index: 1; 
+        padding-top: 100px; 
+        left: 0;
+        top: 0;
+        width: 100%; 
+        height: 100%; 
+        overflow: auto; 
+        background-color: rgb(0,0,0); 
+        background-color: rgba(0,0,0,0.4);
+      }
+
+      .modal-content {
+        position: absolute;
+        background-color: black;
+        margin-left: 35%;
+        padding: 0;
+        width: 30%;
+        box-shadow: 0px 0px 24px #5C5696;
+        -webkit-animation-name: animatetop;
+        -webkit-animation-duration: 0.4s;
+        animation-name: animatetop;
+        animation-duration: 0.4s
+      }
+      
+      @-webkit-keyframes animatetop {
+        from {top:-300px; opacity:0} 
+        to {top:0; opacity:1}
+      }
+      
+      @keyframes animatetop {
+        from {top:-300px; opacity:0}
+        to {top:0; opacity:1}
+      }
+      
+      .close {
+        color: white;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+      }
+      
+      .close:hover,
+      .close:focus {
+        color: #5C5696;
+        text-decoration: none;
+        cursor: pointer;
+      }
+      
+      .modal-header {
+        padding: 2px 16px;
+        color: white;
+      }
+
+      /* FORM https://codepen.io/Mohuth/pen/QWgrPvp */
+      .form-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+      }
+      
+      .screen {		
+          background: black;		
+          position: relative;	
+          
+      }
+      
+      .login {
+            width: 100%; 
+            height: 100%;
+      }
+      
+      .login__field {
+          padding: 10px 0px;	
+          position: relative;	
+      }
+      
+      .login__input {
+          border: none;
+          border-bottom: 2px solid #D1D1D4;
+          background: none;
+          padding: 10px;
+          padding-left: 24px;
+          font-weight: 700;
+          width: 75%;
+          transition: .2s;
+        color: white;
+      }
+      
+      .login__input:active,
+      .login__input:focus,
+      .login__input:hover {
+          outline: none;
+          border-bottom-color: #6A679E;
+      }
+      
+      .login__submit {
+          background: #fff;
+          font-size: 14px;
+          margin-top: 30px;
+          padding: 16px 20px;
+          border-radius: 26px;
+          border: 1px solid #D4D3E8;
+          text-transform: uppercase;
+          font-weight: 700;
+          display: flex;
+          align-items: center;
+          width: 80%;
+          color: #4C489D;
+          cursor: pointer;
+          transition: .2s;
+      }
